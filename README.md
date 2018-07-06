@@ -25,7 +25,8 @@ So, let's start with some basics. You've got that local code and you want to upl
 <br />
 I'll make this first section breif, make a Github account and create a repository. You're flying solo on this bit! Trust me, it's easy and you'll start getting a feel for making repositories in Github. <br />
 <br />
-**Note: When you initialise that 'repo', make sure you create a Readme.md (It's basically the same this as this document you're reading. Really hand to convey information to your reader, and to document your design process! :) <br />
+
+> Note: When you initialise that 'repo', make sure you create a Readme.md (It's basically the same this as this document you're reading. Really hand to convey information to your reader, and to document your design process! :)  Use this [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) link. Adam Pritchard, you are a god!<br />
 
 <br />
 ... waiting ... <br /> 
