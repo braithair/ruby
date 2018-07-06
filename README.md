@@ -4,8 +4,8 @@ A Basic Ruby Repository
 1. Amazon EC2
 2. Using Git
 3. Installing Ruby <br />
-		a. Linux <br />
-		b. Windows
+	a. Linux <br />
+	b. Windows
 4. Ruby Koans
 <br />
 
