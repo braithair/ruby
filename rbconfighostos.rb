@@ -7,10 +7,13 @@ require 'rbconfig'
 
 case
 when @os.downcase.include?('linux')
-  @os = 'Platform is Linux'
+  @os = 'linux'
+  puts 'Platform is Linux'
 when @os.downcase.include?('darwin')
-  @os = 'Platform is OSX'
+  @os = 'osx'
+  puts 'Platform is OSX'
 else
+  @os = 'windows'
   puts 'Platform is Windows'
   exit
 end
