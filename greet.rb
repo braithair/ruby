@@ -1,3 +1,8 @@
+# Name:		greet.rb
+# Author:	Matthew McCracken
+# Version:	1.0
+# Descriptor:	This is a basic greeter script, it says hi.
+
 #!/usr/bin/env ruby
 
 class MegaGreeter

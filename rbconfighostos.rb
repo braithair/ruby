@@ -1,6 +1,9 @@
-##############################################################
-# RbConfig to determine host OS and exit if not mac or linux #
-##############################################################
+# Name:		rbconfighostos.rb
+# Author:	Matthew McCracken
+# Version:	1.0
+# Descriptor:	Checks your OS version
+
+# Ensure that the rbconfig gem is included.
 require 'rbconfig'
 
 @os = RbConfig::CONFIG['host_os']
