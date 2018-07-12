@@ -19,8 +19,8 @@ puts import_dir
 puts temp_dir
 puts export_dir
 
-#Direcyory check
-if Dir.exist? (ENV['/tmp/bills'])
+#directory check
+if Dir.exist? '/tmp/bills'
 	puts "The root directory exists."
 else
 	puts "Cannot find the root directory."
