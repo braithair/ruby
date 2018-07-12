@@ -18,5 +18,5 @@ when @os.downcase.include?('darwin')
 else
   @os = 'windows'
   puts 'Platform is Windows'
-  exit
+  # exit --> Can exit if you want, but not when you are calling this file.
 end

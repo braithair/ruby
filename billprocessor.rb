@@ -3,6 +3,9 @@
 # Version:	1.0
 # Descriptor:	Extracts zipped CSV data, collates, then outputs data.
 
+# Load the OS Checker rbconfig host os check ruby file
+load 'rbconfighostos.rb'
+
 # Define variable for directory
 root_dir = "/tmp/bills"
 
