@@ -35,7 +35,14 @@ when @os.downcase.include?('darwin')
 	export_dir = "#{root_dir}/export"
   puts 'Platform is OSX'
 else
+	# Final covered OS if it's not the above, then it must be Windows.
   @os = 'windows'
+
+	# Defines Windows based processing directories.
+	root_dir = "C:\\tmp"
+	import_dir = "#{root_dir}\\import"
+	temp_dir = "#{root_dir}\\temp"
+	export_dir = "#{root_dir}\\export"
   puts 'Platform is Windows'
 end
 
@@ -46,8 +53,8 @@ puts temp_dir
 puts export_dir
 
 #directory check
-if Dir.exist? @{root_dir}
-	puts "The root directory exists."
+if Dir.exist? "#{root_dir}"
+	puts "The root directory was found!. It is #{root_dir}"
 else
 	puts "Cannot find the root directory."
 end
