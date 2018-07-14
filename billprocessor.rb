@@ -5,13 +5,15 @@
 
 # Ensure the gem requires are included
 require 'rbconfig' # For OS case
-require 'zip'
+require 'zip' #For Unzipping
+
+# Begin case which will define where the root files will be found.
+# There will be cases for 3 platforms: Linux, OSX and Windows
+puts ". : P L A T F O R M   C H E C K : ."
 
 # Define Operating System with namespace resolution operator (::) within rbconfig
 @os = RbConfig::CONFIG['host_os']
 
-# Begin case which will define where the root files will be found.
-# There will be cases for 3 platforms: Linux, OSX and Windows
 case
 when @os.downcase.include?('linux')
 	# Define OS as Linux
@@ -46,17 +48,23 @@ else
 	export_dir = "#{root_dir}\\export"
   puts 'Platform is Windows'
 end
+puts
 
-# Display the import directory
-puts "Given your OS is #{@os}, your processing directories will be:"
-puts import_dir, temp_dir, export_dir
-
-
+puts ". : D I R   C H E C K : ."
 #Directory check based on the case above; to align filesystem and location.
 if Dir.exist? "#{root_dir}"
-	puts "The root directory was found!. It is #{root_dir}"
+	puts "Yes! The root directory was found!. It is #{root_dir}"
 else
-	puts "Cannot find the root directory."
+	puts "No! Cannot find the root directory. Please create the file strucutre."
 end
+puts
+
+# Display the import directory structure needed
+puts ". : R E Q U I R E M E N T S : ."
+puts "Given your OS is #{@os}, your processing directories need to be:
+#{import_dir} and #{temp_dir}, and #{export_dir}"
+puts
 
 # Now to unzip the files
+puts ". : U N Z I P P I N G : ."
+puts "Checking #{import_dir} for the files to be extracted."
