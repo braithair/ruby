@@ -4,7 +4,8 @@
 # Descriptor:	Extracts zipped CSV data, collates, then outputs data.
 
 # Ensure the gem requires are included
-require 'rbconfig'
+require 'rbconfig' # For OS case
+require 'zip'
 
 # Define Operating System with namespace resolution operator (::) within rbconfig
 @os = RbConfig::CONFIG['host_os']
@@ -46,15 +47,16 @@ else
   puts 'Platform is Windows'
 end
 
-#Display the import directory
+# Display the import directory
 puts "Given your OS is #{@os}, your processing directories will be:"
-puts import_dir
-puts temp_dir
-puts export_dir
+puts import_dir, temp_dir, export_dir
 
-#directory check
+
+#Directory check based on the case above; to align filesystem and location.
 if Dir.exist? "#{root_dir}"
 	puts "The root directory was found!. It is #{root_dir}"
 else
 	puts "Cannot find the root directory."
 end
+
+# Now to unzip the files
