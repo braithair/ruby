@@ -3,7 +3,7 @@
 # Version:	1.0
 # Descriptor:	Extracts zipped CSV data, collates, then outputs data.
 
-# Ensure the Require is included
+# Ensure the gem requires are included
 require 'rbconfig'
 
 # Define Operating System with namespace resolution operator (::) within rbconfig
@@ -46,7 +46,7 @@ puts temp_dir
 puts export_dir
 
 #directory check
-if Dir.exist? '/tmp/bills'
+if Dir.exist? @{root_dir}
 	puts "The root directory exists."
 else
 	puts "Cannot find the root directory."
