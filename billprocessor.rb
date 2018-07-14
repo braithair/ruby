@@ -3,19 +3,36 @@
 # Version:	1.0
 # Descriptor:	Extracts zipped CSV data, collates, then outputs data.
 
-# Load the OS Checker rbconfig host os check ruby file
-load 'rbconfighostos.rb'
+# Ensure the Require is included
+require 'rbconfig'
 
-# Define variable for directory
-root_dir = "/tmp/bills"
+# Define Operating System with namespace resolution operator (::) within rbconfig
+@os = RbConfig::CONFIG['host_os']
 
-# Simply displays the working directory for debug
-puts root_dir
 
-# Define processing directories
-import_dir = "#{root_dir}/import"
-temp_dir = "#{root_dir}/temp"
-export_dir = "#{root_dir}/export"
+
+# Begin case which will define where the root files will be found.
+# There will be cases for 3 platforms: Linux, OSX and Windows
+case
+when @os.downcase.include?('linux')
+	# Define OS as Linux
+	@os = 'linux'
+
+	# Define Linux processing directories
+	root_dir = "/tmp/bills"
+	import_dir = "#{root_dir}/import"
+	temp_dir = "#{root_dir}/temp"
+	export_dir = "#{root_dir}/export"
+
+	# Descrbe Environment
+	puts "Platform is Linux, so the files will be in #{root_dir}"
+when @os.downcase.include?('darwin')
+  @os = 'osx'
+  puts 'Platform is OSX'
+else
+  @os = 'windows'
+  puts 'Platform is Windows'
+end
 
 #Display the import directory
 puts import_dir
