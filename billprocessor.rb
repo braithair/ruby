@@ -68,3 +68,20 @@ puts
 # Now to unzip the files
 puts ". : U N Z I P P I N G : ."
 puts "Checking #{import_dir} for the files to be extracted."
+
+# Zip method definition
+# https://markhneedham.com/blog/2008/10/02/ruby-unzipping-a-file-using-rubyzip/
+def unzip_file(file, destination)
+	Zip::File.open(file) do |zip_file|
+  	zip_file.each do |f|
+  		f_path=File.join(destination, f.name)
+  		FileUtils.mkdir_p(File.dirname(f_path))
+  		f.extract(f_path)
+   	end
+ 	end
+end
+
+file = "C:/tmp/import/rk.zip"
+destination = "C:/tmp/temp/"
+
+unzip_file(file, destination)
