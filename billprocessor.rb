@@ -81,7 +81,9 @@ def unzip_file(file, destination)
  	end
 end
 
-file = "C:/tmp/import/rk.zip"
-destination = "C:/tmp/temp/"
+#Define variables for the Zip extract method from above.
+file = "C:/tmp/import/rk.zip" # Choose your file here
+destination = "C:/tmp/temp/"  # Output your file here
 
+# Unzip the files from the method above.
 unzip_file(file, destination)
