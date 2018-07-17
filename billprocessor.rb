@@ -82,11 +82,12 @@ def unzip_file(file, destination)
 end
 
 #Define variables for the Zip extract method from above.
-file = "#{root_dir}" # Choose your file here
+file = "#{import_dir}" # Choose your file here
 destination = "#{temp_dir}"  # Output your file here
 
-puts file
-puts destination
+puts
+puts "The file for unzipping is: #{file}"
+puts "The destination for unzipping is: #{destination}"
 
 # Unzip the files from the method above.
-# unzip_file(file, destination)
+unzip_file(file, destination)
