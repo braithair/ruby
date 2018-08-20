@@ -2,6 +2,7 @@
 # Author:	Matthew McCracken
 # Version:	1.0
 # Descriptor:	Extracts zipped CSV data, collates, then outputs data.
+# Note for Mark
 
 # Ensure the gem requires are included
 require 'rbconfig' # For OS case
